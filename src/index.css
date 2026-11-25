@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-ivory text-ink font-sans antialiased;
+    font-weight: 300;
+  }
+  h1, h2, h3, h4 { @apply font-serif font-medium; letter-spacing: -0.01em; }
+  ::selection { background: #E5D5B8; }
+}
+
+@layer components {
+  .eyebrow { @apply text-[11px] uppercase tracking-luxe text-gold; }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-gold px-7 py-3.5 text-[12px] uppercase tracking-[0.2em] text-white transition-colors duration-500 hover:bg-ink;
+  }
+  .btn-line {
+    @apply inline-flex items-center justify-center gap-2 border border-ink/30 px-7 py-3.5 text-[12px] uppercase tracking-[0.2em] text-ink transition-colors duration-500 hover:border-ink hover:bg-ink hover:text-white;
+  }
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
