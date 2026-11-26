@@ -38,6 +38,18 @@
     "available": true
   },
   {
+    "id": "GLY015",
+    "name": "Blue Cloud Heart Drop Earrings 💙",
+    "category": "Earrings",
+    "price": 599,
+    "originalPrice": 899,
+    "description": "A charming pair of gold-tone drop earrings featuring polished heart-shaped studs, delicate chain links, and soft blue-and-white marbled heart charms. Finished with a tiny gold-tone bead, these earrings add a playful yet elegant touch to your everyday look.\nDetails:\n• Design: Heart-shaped drop earrings\n• Colour: Gold-tone with blue-and-white marbled accents\n• Style: Cute, feminine & elegant\n• Occasion: Everyday wear, brunches & special outings\n• Finish: Glossy gold-tone with lightweight hanging charms",
+    "images": [
+      "/products/earrings/Blue Cloud Heart Drop Earrings_converted.webp"
+    ],
+    "available": true
+  },
+  {
     "id": "GLY006",
     "name": "Pastel Rainbow Crystal Beaded Bracelet",
     "category": "Bracelets",
@@ -186,18 +198,6 @@
     "images": [
       "/products/kada/Golden Floral Charm Kada_2_converted.webp",
       "/products/kada/Golden Floral Charm Kada_converted.webp"
-    ],
-    "available": true
-  },
-  {
-    "id": "GLY015",
-    "name": "Blue Cloud Heart Drop Earrings 💙",
-    "category": "Earrings",
-    "price": 599,
-    "originalPrice": 899,
-    "description": "A charming pair of gold-tone drop earrings featuring polished heart-shaped studs, delicate chain links, and soft blue-and-white marbled heart charms. Finished with a tiny gold-tone bead, these earrings add a playful yet elegant touch to your everyday look.\nDetails:\n• Design: Heart-shaped drop earrings\n• Colour: Gold-tone with blue-and-white marbled accents\n• Style: Cute, feminine & elegant\n• Occasion: Everyday wear, brunches & special outings\n• Finish: Glossy gold-tone with lightweight hanging charms",
-    "images": [
-      "/products/earrings/Blue Cloud Heart Drop Earrings_converted.webp"
     ],
     "available": true
   },
