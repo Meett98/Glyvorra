@@ -59,6 +59,11 @@ export const images = {
   cloudinaryCloudName: env.VITE_CLOUDINARY_CLOUD_NAME ?? "",
 };
 
+/** Google Analytics 4 measurement ID (e.g. "G-XXXXXXXXXX"). Leave empty to disable tracking. */
+export const analytics = {
+  gaMeasurementId: env.VITE_GA_MEASUREMENT_ID ?? "",
+};
+
 export const instagramGrid = [
   { image: "./products/reels/reel1_banner.webp", url: "https://www.instagram.com/reels/DeL3-9Js2zv/" },
   { image: "./products/reels/reel2_banner.webp", url: "https://www.instagram.com/reel/Dd_Yo2yhex5/" },

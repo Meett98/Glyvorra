@@ -11,7 +11,7 @@ Your shopping cart is saved locally in your browser using local storage so you c
 
 ## Website & Analytics
 
-This website does not currently use its own backend server or database. However, our hosting provider may automatically collect limited technical information, such as IP addresses, browser type, device information, and website usage data for security, performance, and analytics purposes.
+This website does not currently use its own backend server or database. We use Google Analytics to understand how visitors use the website, such as which pages are viewed and how they arrive. Google Analytics may set cookies and collect information such as IP address, browser type, device information and usage data, which Google processes under its own privacy policy. Our hosting provider may also automatically collect limited technical information for security and performance purposes.
 
 ## Order Information
 

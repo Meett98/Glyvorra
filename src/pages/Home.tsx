@@ -7,6 +7,7 @@ import { instagramGrid, promo, site, social, story } from "../config/site";
 import { categories } from "../data/categories";
 import { isSampleData, newArrivals } from "../data/products";
 import Img from "../components/Img";
+import { imageUrl } from "../lib/utils";
 import DriftImage from "../components/DriftImage";
 import Marquee from "../components/Marquee";
 import ProductCard from "../components/ProductCard";
@@ -48,7 +49,7 @@ export default function Home() {
             exit={{ x: "-100%" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-x-0 top-0 h-[40svh] bg-cover bg-[position:72%_center] sm:inset-0 sm:h-auto sm:bg-center"
-            style={{ backgroundImage: `url("${HERO_IMAGES[activeHeroImage]}")` }}
+            style={{ backgroundImage: `url("${imageUrl(HERO_IMAGES[activeHeroImage], 1600)}")` }}
           />
         </AnimatePresence>
         <div aria-hidden="true" className="absolute inset-0 hidden bg-gradient-to-r from-ivory/90 via-ivory/45 to-transparent sm:block" />
@@ -88,7 +89,7 @@ export default function Home() {
           {categories.filter((c) => c.showOnHome).map((c, i) => (
             <Reveal key={c.slug} delay={i * 0.08}>
               <Link to={`/shop?category=${c.slug}`} className={`group relative flex aspect-[3/4] flex-col items-center overflow-hidden bg-gradient-to-br from-[#F2ECE5] to-[#E5D5B8] px-3 text-center ${c.banner ? "justify-start pt-[12%]" : "justify-center"}`}>
-                {c.banner && <img src={c.banner} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />}
+                {c.banner && <img src={imageUrl(c.banner, 800)} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />}
                 {c.banner && <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#2A1E0E]/60 via-[#2A1E0E]/25 via-45% to-transparent" />}
                 <h3 className={`relative font-serif text-lg font-medium uppercase leading-snug tracking-[0.18em] transition-transform duration-700 group-hover:scale-105 sm:text-xl ${c.banner ? "text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.35)]" : "text-[#8A6A2F]"}`}>{c.name}</h3>
                 <span className={`relative mt-3 h-px w-8 transition-all duration-700 group-hover:w-14 ${c.banner ? "bg-white/70" : "bg-gold/70"}`} />

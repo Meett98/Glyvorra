@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Home from "./pages/Home";
 import { CartProvider } from "./context/CartContext";
+import { trackPageView } from "./lib/analytics";
 
 const Shop = lazy(() => import("./pages/Shop"));
 const Cart = lazy(() => import("./pages/Cart"));
@@ -27,6 +28,9 @@ function ScrollToTop() {
 
 export default function App() {
   const location = useLocation();
+  useEffect(() => {
+    trackPageView(`${location.pathname}${location.search}`);
+  }, [location.pathname, location.search]);
   return (
     <CartProvider>
     <>

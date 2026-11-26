@@ -26,14 +26,15 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
-          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH }}
+          VITE_SITE_URL: ${{ vars.VITE_SITE_URL || format('https://{0}.github.io', github.repository_owner) }}
+          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || format('/{0}/', github.event.repository.name) }}
           VITE_WHATSAPP_NUMBER: ${{ vars.VITE_WHATSAPP_NUMBER }}
           VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
           VITE_CONTACT_PHONE: ${{ vars.VITE_CONTACT_PHONE }}
           VITE_INSTAGRAM_HANDLE: ${{ vars.VITE_INSTAGRAM_HANDLE }}
           VITE_INSTAGRAM_URL: ${{ vars.VITE_INSTAGRAM_URL }}
           VITE_CLOUDINARY_CLOUD_NAME: ${{ vars.VITE_CLOUDINARY_CLOUD_NAME }}
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
